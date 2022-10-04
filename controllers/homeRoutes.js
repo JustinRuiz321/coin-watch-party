@@ -3,7 +3,24 @@ const withAuth = require('../utils/auth');
 
 
 router.get('/', async (req , res) => {
+    try {
+        const coinData = await Coin.findAll({
+            include: [
+                {
+                    model: User,
+                    attributes: ['name'],
+                },
+            ],
+        });
+        const coins = coinData.map((coin) => coin.get({ plain:true}));
 
+        res.render('homepage' , {
+            coins,
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
 
 router.get('/login', (req,res) => {
@@ -16,7 +33,25 @@ router.get('/login', (req,res) => {
 })
 
 router.get('/crypto' , async (req , res) => {
+    try {
+        const coinData = await Coin.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['name'],
+                },
+            ],
+        });
 
+        const coins = coinData.get({plain:true});
+
+        res.render('coins', {
+            ...coins,
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
 
 router.get('/profile' , withAuth, async (req , res) => {
