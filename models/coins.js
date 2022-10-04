@@ -12,7 +12,7 @@ Coins.init(
         autoIncrement: true,
       },
       name: {
-        type:
+        type: DataTypes.STRING,
       }
     }
 );
