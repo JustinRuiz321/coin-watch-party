@@ -1,23 +1,23 @@
 [
     {
         "name": "Bitcoin (BTC)",
-        "description": "Founded by Satoshi Nakamoto, BTC is digital currency that allows for decentralized secure peer-to-peer transactions over the internet.",
-        "url": " "
+        "description": "Founded by Satoshi Nakamoto, BTC is digital currency that allows for decentralized secure peer-to-peer transactions over the internet."
+        
     },
     {
         "name": "Ethereum (ETH)",
-        "description": "Similar to BTC, ETH is",
-        "url": ""
+        "description": "Similar to BTC, ETH is"
+        
     },
     {
         "name": "Dogecoin ()",
-        "description": "A meme stock",
-        "url": ""
+        "description": "A meme stock"
+        
     },
     {
         "name": "Tether ()",
-        "description": "no information found on tether,",
-        "url": ""
+        "description": "no information found on tether,"
+       
     }
 ]
 

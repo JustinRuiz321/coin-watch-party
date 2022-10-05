@@ -5,7 +5,7 @@ class Coins extends Model {}
 
 Coins.init(
     {
-      coin_id: {
+      id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
@@ -19,6 +19,8 @@ Coins.init(
         type: DataTypes.STRING,
         allowNull: false,
       },
+    },
+    {
       sequelize,
       timestamps: false,
       freezeTableName: true,

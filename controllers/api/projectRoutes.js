@@ -6,7 +6,8 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, async (req, res) => {
   try {
     const newCoin = await Coins.create({
-      ...req.body,
+      name: req.body.name,
+      description: req.body.description,
       user_id: req.session.user_id,
     });
 
@@ -36,4 +37,4 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
-
+module.exports = router;
