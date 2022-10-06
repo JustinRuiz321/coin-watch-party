@@ -2,8 +2,6 @@
 # -- An App designed to view the status of global cryptocurrencies
 
 ## Table of Contents
-- [Coin Watch Party](#coin-watch-party)
-- [-- An App designed to view the status of global cryptocurrencies](#---an-app-designed-to-view-the-status-of-global-cryptocurrencies)
   - [Table of Contents](#table-of-contents)
   - [Project Links](#project-links)
   - [Project Objective](#project-objective)
