@@ -32,7 +32,22 @@ router.get('/login', (req,res) => {
 
     res.render('login');
 })
-
+router.get('/signup', (req,res) => {
+    // if (req.session.logged_in) {
+ //        res.redirect('/profile');
+  //       return;
+   //  }
+ 
+     res.render('signup');
+ })
+ router.get('/homepage', (req,res) => {
+    // if (req.session.logged_in) {
+ //        res.redirect('/profile');
+  //       return;
+   //  }
+ 
+     res.render('homepage');
+ })
 router.get('/crypto' , async (req , res) => {
     try {
         const coinData = await Coins.findByPk(req.params.id, {
