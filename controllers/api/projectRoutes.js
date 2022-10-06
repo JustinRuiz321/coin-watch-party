@@ -1,17 +1,15 @@
 const router = require('express').Router();
-const { Coins } = require('../../models');
+const { Project } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-// Create Coin
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newCoin = await Coins.create({
-      name: req.body.name,
-      description: req.body.description,
+    const newProject = await Project.create({
+      ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newCoin);
+    res.status(200).json(newProject);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -19,14 +17,14 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const coinData = await   Coins.destroy({
+    const projectData = await Project.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!coinData) {
+    if (!projectData) {
       res.status(404).json({ message: 'No project found with this id!' });
       return;
     }

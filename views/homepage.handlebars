@@ -1,14 +1,28 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Welcome please log in or sign up</h1>
-    
-</body>
-</html> 
+<!-- Loop over each object in the projects array -->
+{{#each projects as |project| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      <a href="{{project.website}}">{{project.name}}</a>
+    </h2>
+    <p>
+      <span for="img" aria-label="money"></span>
+      <!-- Pass needed_funding value to the helper function -->
+      <span class="dollar-amount">Ranking: {{project.rank}}</span>
+    </p>
+    <p>Ticker Symbol: {{project.code}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      Current rate being sold: ${{project.rate}}
+    </p>
+    <p>
+      Highest it was ever sold: ${{project.allTimeHighUSD}}
+    </p>
+    <p>
+      Max supply of coins created: {{project.maxSupply}}
+    </p>
+  </div>
+</div>
+{{/each}}
