@@ -5,32 +5,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COIN WATCH PARTY</title>
-  <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
+  <div class="justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <span role="img" aria-label="money">👀</span>
+        <span>&#8383;Ξ₮</span>
         <a href="/">Coin Watch Party!</a>
       </h1>
       <nav>
         {{#if logged_in}}
-        <a href="/coin-list">YOUR COINS</a>
+        <a href="/coin-list"></a>
         <button class="no-button" id="logout">SIGN OUT</button>
         {{else}}
         <p>Don't have an account? <a href="/signup">Sign up!</a></p>
         {{/if}}
       </nav>
     </header>
-    <main class="container container-fluid mt-5">
+    <main class="mt-5">
       {{{ body }}}
     </main>
-    <footer>
-      
-    </footer>
   </div>
 
   {{#if logged_in}}

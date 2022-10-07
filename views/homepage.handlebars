@@ -1,27 +1,23 @@
-<!-- Loop over each object in the projects array -->
-{{#each projects as |project| }}
-<div class="row mb-4 project">
+{{#each coins as |coin| }}
+<div class="row mb-4">
   <div class="col-md-5">
     <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <a href="{{project.website}}">{{project.name}}</a>
+      <a href="{{coin.website}}">{{coin.name}}</a>
     </h2>
     <p>
-      <span for="img" aria-label="money"></span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">Ranking: {{project.rank}}</span>
+      <span class="ranking">Ranking: {{coin.rank}}</span>
     </p>
-    <p>Ticker Symbol: {{project.code}}</p>
+    <p>Ticker Symbol: {{coin.code}}</p>
   </div>
   <div class="col-md-7">
     <p>
-      Current rate being sold: ${{project.rate}}
+      Current rate being sold: ${{coin.rate}}
     </p>
     <p>
-      Highest it was ever sold: ${{project.allTimeHighUSD}}
+      Highest it was ever sold: ${{coin.allTimeHighUSD}}
     </p>
     <p>
-      Max supply of coins created: {{project.maxSupply}}
+      Max supply of coins created: {{coin.maxSupply}}
     </p>
   </div>
 </div>

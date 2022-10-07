@@ -10,6 +10,7 @@
     "finalhandler": "^1.2.0",
     "mysql2": "^2.3.3",
     "pre-binding": "^1.1.0",
+    "seeds": "^2.3.1",
     "sequelize": "^6.24.0"
   }
 }
