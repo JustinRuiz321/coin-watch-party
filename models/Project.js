@@ -1,16 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {}
+class Coins extends Model {}
 
-Project.init(
+Coins.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -34,13 +28,7 @@ Project.init(
     maxSupply: {
       type: DataTypes.STRING,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
+    
   },
   {
     sequelize,
@@ -51,4 +39,4 @@ Project.init(
   }
 );
 
-module.exports = Project;
+module.exports = Coins;
