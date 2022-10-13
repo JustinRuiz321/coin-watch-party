@@ -46,6 +46,9 @@ We initally planned on making an application where you can select which cryptocu
 ## Tests
 npm test
 
+## Deployed app
+https://coinwatchparty.herokuapp.com/coin-list
+
 ## Questions
 Please feel free to contact us through Github and our emails: 
 Email: 2dylansantiago@gmail.com //  Github: DylanSantiago
